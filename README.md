@@ -58,3 +58,6 @@ of the application, no errors were found in the code base, but the assistant was
 When errors occurred when launching the application related to not installing the necessary dependencies, the errors were copied to the
 chat and the assistant corrected them independently.
 The chat history is shown in the screenshots below:
+
+![1](https://github.com/user-attachments/assets/5c291384-192b-46fd-b50a-4a6f76bf3ed8)
+![2](https://github.com/user-attachments/assets/d5693478-6446-434f-b5d8-50c4bccac13f)
