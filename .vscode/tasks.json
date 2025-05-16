@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Create Next.js 15.3.2 MIUI v7 App",
+			"type": "shell",
+			"command": "npx create-next-app@15.3.2 weather-ui --use-npm && cd weather-ui && npm install @mui/material @emotion/react @emotion/styled"
+		}
+	]
+}

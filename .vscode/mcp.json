@@ -1,0 +1,12 @@
+{
+    "servers": {
+        "API-Helper": {
+            "url": "http://localhost:5258/mcp"
+        },
+        "Context7": {
+            "type": "stdio",
+            "command": "npx",
+            "args": ["-y", "@upstash/context7-mcp@latest"]
+        }
+    }
+}
