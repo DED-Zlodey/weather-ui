@@ -2,10 +2,12 @@
 
 ### Description
 
-The entire application is written by an AI assistant (Copilot) using an auxiliary, previously created HTTP SSE MCP server
+The entire application is written by an AI assistant (Copilot) using an auxiliary, previously created HTTP SSE MCP
+server
 using
 the library [McpEndpointsTools](https://github.com/DED-Zlodey/McpEndpontsTools "McpEndpointsTools")
-The application demonstrates the ease of UI development using a ready-made external API in conjunction with the MCP server, which
+The application demonstrates the ease of UI development using a ready-made external API in conjunction with the MCP
+server, which
 is automatically
 created by the `McpEndpointsTools` library with a detailed description of all API endpoints.
 
@@ -48,14 +50,21 @@ Make three buttons:
 ```
 
 - `Context7` was used to improve working with the codebase
-- `API-Helper` is an MCP server that provides all the information about the endpoints known to it in the API (learn more about
+- `API-Helper` is an MCP server that provides all the information about the endpoints known to it in the API (learn more
+  about
   the automatic creation of an MCP server on `ASP.Net Core`
   read [here](https://github.com/DED-Zlodey/McpEndpontsTools "McpEndpointsTools") and thus speeds
   up UI development.
 
-Initially, a file was created in the project.vscode/mcp.json` Everything else is created by the assistant. During the creation
-of the application, no errors were found in the code base, but the assistant was unable to install some dependencies. After
-When errors occurred when launching the application related to not installing the necessary dependencies, the errors were copied to the
+An example of the API application used to create this demo application
+is [here](https://github.com/DED-Zlodey/McpEndpontsTools/tree/master/WebApiExample "Example API ,Net Core")
+
+Initially, a file was created in the project.vscode/mcp.json` Everything else is created by the assistant. During the
+creation
+of the application, no errors were found in the code base, but the assistant was unable to install some dependencies.
+After
+When errors occurred when launching the application related to not installing the necessary dependencies, the errors
+were copied to the
 chat and the assistant corrected them independently.
 The chat history is shown in the screenshots below:
 
