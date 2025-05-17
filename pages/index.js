@@ -1,26 +1,28 @@
 import { useState } from 'react';
 import { Button, TextField, Typography, Box } from '@mui/material';
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 export default function Home() {
   const [windSpeedParams, setWindSpeedParams] = useState({ v: '', h: '', k: '' });
   const [rainChanceParams, setRainChanceParams] = useState({ pressure: '' });
   const [result, setResult] = useState(null);
 
   const fetchWeatherForecast = async () => {
-    const response = await fetch('http://localhost:5258/WeatherForecast');
+    const response = await fetch(`${baseUrl}/WeatherForecast`);
     const data = await response.json();
     setResult(data);
   };
 
   const fetchWindSpeed = async () => {
     const query = new URLSearchParams(windSpeedParams).toString();
-    const response = await fetch(`http://localhost:5258/WeatherForecast/GetWindSpeed?${query}`);
+    const response = await fetch(`${baseUrl}/WeatherForecast/GetWindSpeed?${query}`);
     const data = await response.json();
     setResult(data);
   };
 
   const fetchRainChance = async () => {
-    const response = await fetch('http://localhost:5258/WeatherForecast/PredictRainChance', {
+    const response = await fetch(`${baseUrl}/WeatherForecast/PredictRainChance`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ model: rainChanceParams }),
